@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking Confirmation | SmartBiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const packageType = urlParams.get('package');
+      const packageNames = {
+        'essential': 'Essential Package',
+        'professional': 'Professional Package',
+        'enterprise': 'Enterprise Package'
+      };
+      
+      if (packageType && packageNames[packageType]) {
+        document.getElementById('package-name').textContent = packageNames[packageType];
+      }
+    });
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="site-header" role="banner">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="logo" href="index.html">Smart<span>Biz</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-link btn btn--sm" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <section class="hero hero--confirmation" aria-label="Booking confirmation">
+      <div class="hero__content">
+        <div class="confirmation-box reveal-up">
+          <svg class="confirmation-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"/>
+          </svg>
+          <h1>Thank You for Your Booking!</h1>
+          <p>Your <strong id="package-name">service package</strong> has been successfully reserved.</p>
+          <p>Our team will contact you within 24 hours to discuss your project details and next steps.</p>
+          <div class="confirmation-actions">
+            <a href="services.html" class="btn btn--ghost" aria-label="Back to services">View Services</a>
+            <a href="contact.html" class="btn" aria-label="Contact us">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">Smart<span>Biz</span></a>
+        <p class="muted">Premium solutions for ambitious teams.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">© 2025 SmartBiz.</div>
+    </div>
+  </footer>
+</body>
+</html>

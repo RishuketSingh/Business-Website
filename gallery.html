@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery — SmartBiz</title>
+  <meta name="description" content="SmartBiz project gallery with lightbox.">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="JS/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="site-header" role="banner">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="logo" href="index.html">Smart<span>Biz</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link active" href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
+        <li><a class="nav-link btn btn--sm" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <section class="page-hero small" aria-labelledby="gallery-heading">
+      <div class="container">
+        <h1 id="gallery-heading" class="reveal-up">Project Gallery</h1>
+        <p class="muted reveal-up delay-1">Click an image to preview.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="portfolio-heading">
+      <div class="container gallery-grid">
+        <figure class="gallery-item reveal-up" role="group" aria-labelledby="img1-desc">
+          <img src="Images/sample1.jpg" alt="Team brainstorming session" data-lightbox>
+          <figcaption id="img1-desc" class="muted">Brand strategy workshop</figcaption>
+        </figure>
+        <figure class="gallery-item reveal-up delay-1" role="group" aria-labelledby="img2-desc">
+          <img src="Images/sample2.jpg" alt="Marketing campaign dashboard" data-lightbox>
+          <figcaption id="img2-desc" class="muted">Marketing funnel analysis</figcaption>
+        </figure>
+        <figure class="gallery-item reveal-up delay-2" role="group" aria-labelledby="img3-desc">
+          <img src="Images/sample3.jpg" alt="Website design mockup" data-lightbox>
+          <figcaption id="img3-desc" class="muted">Web redesign process</figcaption>
+        </figure>
+        <figure class="gallery-item reveal-up delay-3" role="group" aria-labelledby="img4-desc">
+          <img src="Images/sample4.jpg" alt="Social media content creation" data-lightbox>
+          <figcaption id="img4-desc" class="muted">Content campaign development</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox__close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox__prev" aria-label="Previous image">&#10094;</button>
+    <img class="lightbox__img" alt="" aria-describedby="lightbox-desc">
+    <div id="lightbox-desc" class="sr-only"></div>
+    <button class="lightbox__next" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">Smart<span>Biz</span></a>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links" role="list">
+          <li role="listitem"><a href="about.html">About</a></li>
+          <li role="listitem"><a href="services.html">Services</a></li>
+          <li role="listitem"><a class="active" href="gallery.html" aria-current="page">Gallery</a></li>
+          <li role="listitem"><a href="blog.html">Blog</a></li>
+          <li role="listitem"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal muted">© 2025 SmartBiz.</div>
+    </div>
+  </footer>
+</body>
+</html>
